@@ -2,21 +2,19 @@ package com.example.androidfiszka;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG  ="MainActivity";
+    private static final String TAG = "MainActivity";
 
     DatabaseHelper myDB;
     Button btnAddCategory, btnAddFiszka;
@@ -40,11 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<String> cateogies = new ArrayList<>();
                 Cursor data = myDB.GetAllCategories();
 
-                if(data.getCount() ==  0){
-                    Toast.makeText(MainActivity.this,"EMPTY DB",Toast.LENGTH_LONG).show();
-                }
-                else{
-                    Toast.makeText(MainActivity.this,"NOT EMPTY DB",Toast.LENGTH_LONG).show();
+                if (data.getCount() == 0) {
+                    Toast.makeText(MainActivity.this, "EMPTY DB", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "NOT EMPTY DB", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -53,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddFiszka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"CLICK FISZKA",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "CLICK FISZKA", Toast.LENGTH_LONG).show();
                 openCreateFiszka();
             }
         });
@@ -68,5 +65,6 @@ public class MainActivity extends AppCompatActivity {
     public void openCreateCategory() {
         Intent intent = new Intent(this, CreateCategoryActivity.class);
         startActivity(intent);
+    }
 
 }

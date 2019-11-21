@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(MainActivity.this,"CLICK CATEGORIES",Toast.LENGTH_LONG).show();
+                //openCreateCategory(); -> na razie skomentowane, to na dole przeniesc do nowych activity!
 
                 ArrayList<String> cateogies = new ArrayList<>();
                 Cursor data = myDB.GetAllCategories();
@@ -54,9 +54,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"CLICK FISZKA",Toast.LENGTH_LONG).show();
+                openCreateFiszka();
             }
         });
 
-
     }
+
+    public void openCreateFiszka() {
+        Intent intent = new Intent(this, CreateFiszkaActivity.class);
+        startActivity(intent);
+    }
+
+    public void openCreateCategory() {
+        Intent intent = new Intent(this, CreateCategoryActivity.class);
+        startActivity(intent);
+
 }

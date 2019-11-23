@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
@@ -51,6 +52,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String category = parent.getItemAtPosition(position).toString();
+                openFiszka(category);
+            }
+        });
+    }
+
+
+    public void openFiszka(String category){
+        Intent intent = new Intent(this, FiszkaActivity.class);
+        intent.putExtra("EXTRA_CATEGORY",category);
+        startActivity(intent);
     }
 
     public void openCreateFiszka() {

@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "fiszkaDataBase.db";
+    public static final String DATABASE_NAME = "fiszkaDB.db";
     public static final String CATEGORY_TABLE_NAME = "fiszkaCategories";
     public static final String FISZKA_TABLE_NAME = "fiszka";
 
@@ -72,8 +72,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor GetAllFiszkaByCategory(String categoryName){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM "  + FISZKA_TABLE_NAME + " WHERE CATEGORY_NAME = " + categoryName,null);
+        Cursor data = db.rawQuery("SELECT * FROM "  + FISZKA_TABLE_NAME + " WHERE CATEGORY_NAME = " + "'" + categoryName +"'",null);
         return data;
     }
+
 
 }

@@ -2,8 +2,15 @@ package com.example.androidfiszka;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +25,7 @@ public class FiszkaActivity extends AppCompatActivity {
     DatabaseHelper myDB;
     String choosedCategory;
     Cursor data;
+    CountDownTimer cdt = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +57,6 @@ public class FiszkaActivity extends AppCompatActivity {
                 RandomQuestion();
             }
         });
-
     }
 
     public void RandomQuestion(){
@@ -68,5 +75,6 @@ public class FiszkaActivity extends AppCompatActivity {
             txAnswer.setText(data.getString(3));
         }
     }
+
 
 }

@@ -20,7 +20,7 @@
         android:id="@+id/createCategoryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:text="Create category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +28,25 @@
 
     <ListView
         android:id="@+id/categoryList"
-        android:layout_width="410dp"
-        android:layout_height="440dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="395dp"
+        android:layout_height="368dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Select category"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/categoryList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createCategoryButton" />
 

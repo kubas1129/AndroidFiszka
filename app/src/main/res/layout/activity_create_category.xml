@@ -8,35 +8,39 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
+        android:layout_width="326dp"
+        android:layout_height="43dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Create Category"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/categoryName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="327dp"
+        android:layout_height="69dp"
         android:layout_marginTop="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="text|textMultiLine|textCapSentences"
+        android:maxLines="10"
+        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/categoryDesciption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="328dp"
+
+        android:layout_height="184dp"
         android:layout_marginTop="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Description"
+        android:inputType="text|textMultiLine|textCapSentences"
+        android:maxLines="10"
+        android:hint="Description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categoryName" />
@@ -51,4 +55,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categoryDesciption" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

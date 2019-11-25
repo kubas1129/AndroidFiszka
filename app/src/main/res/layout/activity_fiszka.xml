@@ -49,13 +49,14 @@
         android:layout_width="348dp"
         android:layout_height="141dp"
         android:layout_marginTop="68dp"
-        android:text="Odpowiedz"
         android:gravity="center"
+        android:text="Odpowiedz"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAnswerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/showAnswerButton"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/nextQuestionButton"

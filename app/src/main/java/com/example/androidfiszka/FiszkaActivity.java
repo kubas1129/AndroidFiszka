@@ -39,7 +39,7 @@ public class FiszkaActivity extends AppCompatActivity {
         btnShowAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                txAnswer.setVisibility(View.VISIBLE);
             }
         });
 
@@ -53,6 +53,7 @@ public class FiszkaActivity extends AppCompatActivity {
     }
 
     public void RandomQuestion(){
+        txAnswer.setVisibility(View.INVISIBLE);
         if(data.getCount() == 0){
             txQuestion.setText("NO QUESTIONS");
             txAnswer.setText("NO ANSWERS");

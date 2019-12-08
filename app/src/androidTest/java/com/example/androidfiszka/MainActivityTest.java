@@ -29,9 +29,15 @@ public class MainActivityTest {
 
 
     @Test
-    public void onClick(){
+    public void testcreateCategoryButton(){
         assertNotNull(withId(R.id.createCategoryButton));
         onView(withId(R.id.createCategoryButton)).perform(click());
+    }
+    
+    @Test
+    public void testcreateFiszkaButton(){
+        assertNotNull(withId(R.id.createFiszkaButton));
+        onView(withId(R.id.createFiszkaButton)).perform(click());
     }
 
 
